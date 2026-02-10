@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>苏航 (Su Hang) - 个人简历</title>
+    <style>
+        :root { --hit-blue: #004299; --pku-red: #8c0000; --bg: #f4f7fa; }
+        body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; background: var(--bg); color: #333; line-height: 1.4; padding: 15px; }
+        .container { max-width: 900px; margin: 0 auto; }
+        header { background: white; padding: 20px; border-radius: 8px; display: flex; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.05); margin-bottom: 15px; position: relative; }
+        .avatar { width: 100px; height: 130px; object-fit: cover; border-radius: 4px; border: 1px solid #ddd; margin-right: 20px; flex-shrink: 0; }
+        .h-info h1 { margin: 0; font-size: 26px; color: var(--hit-blue); }
+        .postdoc { color: var(--pku-red); font-weight: bold; font-size: 16px; margin: 5px 0; }
+        .actions { position: absolute; top: 20px; right: 20px; display: flex; gap: 8px; }
+        .btn-action { padding: 4px 10px; border-radius: 4px; border: 1px solid var(--hit-blue); background: white; color: var(--hit-blue); cursor: pointer; font-size: 12px; }
+        .btn-action:hover { background: var(--hit-blue); color: white; }
+        .card { background: white; border-radius: 8px; padding: 15px 20px; margin-bottom: 12px; box-shadow: 0 1px 5px rgba(0,0,0,0.03); }
+        h2 { font-size: 18px; color: var(--hit-blue); border-left: 5px solid var(--hit-blue); padding-left: 12px; margin: 0 0 12px 0; border-bottom: 1px solid #eee; padding-bottom: 3px; }
+        h3 { font-size: 15px; color: #444; border-bottom: 1px dashed #eee; padding-bottom: 3px; margin: 15px 0 8px; }
+        .list-row { padding: 6px 0; border-bottom: 1px solid #f9f9f9; font-size: 13px; line-height: 1.5; }
+        .tag { font-size: 10px; padding: 1px 4px; border-radius: 3px; font-weight: bold; margin-right: 5px; vertical-align: middle; }
+        .t-sci { background: #e3f2fd; color: #1976d2; }
+        .t-cn { background: #f3e5f5; color: #7b1fa2; }
+        .me { font-weight: 900; text-decoration: underline; color: #000; }
+        .edu-item { margin-bottom: 10px; }
+        .edu-header { display: flex; justify-content: space-between; font-weight: bold; color: #333; font-size: 14px; }
+        .edu-details { font-size: 13px; color: #666; padding-left: 12px; border-left: 2px solid #eee; margin-top: 3px; }
+        @media print { .actions { display: none !important; } body { padding: 0; background: white; } .card { box-shadow: none; border: none; margin-bottom: 10px; } h2 { margin-bottom: 8px; } }
+    </style>
+</head>
+<body>
+<div class="container" id="content">
+    <header>
+        <img src="avatar.jpg" alt="头像" class="avatar" onerror="this.src='https://via.placeholder.com/100x130?text=苏航'">
+        <div class="h-info">
+            <h1>苏 航 (Su Hang)</h1>
+            <p class="postdoc">深圳自然资源数据管理中心 在站博士后</p>
+            <p><strong>联合培养单位：</strong> 北京大学深圳研究生院 | <strong>合作导师：</strong> 张浩然 教授</p>
+            <p style="font-size: 13px;">电话：15814420442 | 邮箱：21B356004@stu.hit.edu.cn</p>
+        </div>
+        <div class="actions">
+            <button class="btn-action" onclick="window.print()">导出 PDF</button>
+            <button class="btn-action" onclick="exportWord()">导出 Word</button>
+        </div>
+    </header>
+
+    <div class="card">
+        <h2>教育背景</h2>
+        <div class="edu-item">
+            <div class="edu-header"><span>哈尔滨工业大学（深圳） | 建筑学院 | 博士学位</span><span>2021.03 - 2025.06</span></div>
+            <div class="edu-details">
+                研究方向：建筑技术，照明人因，低碳节能<br>
+                博士论文：《地下空间中仿天然光动态照明的作用机制与循证设计研究》<br>
+                学术导师：杨彪 副教授/博导 | 企业导师：梁峥 教授级高级工程师
+            </div>
+        </div>
+        <div class="edu-item">
+            <div class="edu-header"><span>哈尔滨工业大学 | 建筑学院 | 硕士学位</span><span>2018.09 - 2021.01</span></div>
+            <div class="edu-details">
+                专 业：建筑学 | 研究方向：建筑技术光学方向<br>
+                硕士论文：《基于CIE标准天空的瞬时实际天空类型识别方法研究》<br>
+                导 师：杨钢 副教授
+            </div>
+        </div>
+    </div>
+
+   <div class="card">
+        <h2>期刊论文</h2>
+        <div class="list-row"><span class="tag t-sci">SCI Q1</span> [1] <span class="me">Su H</span>, Wei WZ, et al. A pilot study... <em>Developments in the Built Environment</em>. 2025, 22: 100658.</div>
+        <div class="list-row"><span class="tag t-sci">SCI Q1</span> [2] Zhang SB, <span class="me">Su H</span>, et al. Energy usage and occupant comfort... <em>Building and Environment</em>. 2025, 278.</div>
+        <div class="list-row"><span class="tag t-sci">SCI Q2</span> [3] <span class="me">Su H</span>, Sun YQ, et al. Daylight-Simulcasted Dynamic Lighting... <em>Indoor and Built Environment</em>. 2024.</div>
+        <div class="list-row"><span class="tag t-sci">SCI Q1</span> [4] Li TY, <span class="me">Su H</span>, et al. Pedestrian lighting on facial expression recognition... <em>Building and Environment</em>. 2023.</div>
+        <div class="list-row"><span class="tag t-sci">SCI Q4</span> [5] Zhang SB, <span class="me">Su H</span>, et al. Occupant-Centric Intelligent Management Office. <em>Light & Engineering</em>. 2025.</div>
+        <div class="list-row"><span class="tag t-cn">核心</span> [6] <span class="me">苏航</span>, 杨钢. 基于15个天空测量点亮度值的实际天空类型实时分类方法. <em>照明工程学报</em>. 2021.</div>
+        <div class="list-row"><span class="tag t-cn">核心</span> [7] 罗臻擎, <span class="me">苏航</span>, 等. 城市照明规划与动态光污染的分级分类. <em>照明工程学报</em>. 2022.</div>
+        <div class="list-row"><span class="tag t-cn">核心</span> [8] 刘享杰, <span class="me">苏航</span>, 等. 地下空间中自然光介入程度对人绩效影响. <em>照明工程学报</em>. 2023.</div>
+        <div class="list-row"><span class="tag t-cn">核心</span> [9] 刘博, <span class="me">苏航</span>, 等. 空间站光环境与人因照明研究. <em>载人航天</em>. 2023.</div>
+        <div class="list-row"><span class="tag t-cn">核心</span> [10] 缪晓波, <span class="me">苏航</span>, 等. 室内情景照明对人际距离感知的影响. <em>照明工程学报</em>. 2023.</div>
+    </div>
+
+    <div class="card">
+        <h2>会议论文</h2>
+        <div class="list-row">[1] <span class="me">Hang Su</span>, et al. Interpersonal Space in Indoor Environment. 13th ALC, Beijing.</div>
+        <div class="list-row">[2] <span class="me">Hang Su</span>, et al. Natural Light Penetration in Underground Space. 30th CIE, Slovenia.</div>
+        <div class="list-row">[3] Xiaobo Miao, <span class="me">Hang Su</span>, et al. Reading Interactively on Paper and VDT. 14th ALC, Tokyo.</div>
+        <div class="list-row">[4] Baiyu Liu, <span class="me">Hang Su</span>, et al. Dynamic Lighting Environment with Artificial Skylight. 15th ALC, Seoul.</div>
+        <div class="list-row">[5] <span class="me">苏航</span>, 等. 办公空间光环境的采光照明一体化优化控制策略. 第十四届建筑物理大会.</div>
+        <div class="list-row">[6] 罗臻擎, <span class="me">苏航</span>, 等. 城市夜间光环境中动态光污染分类及心理影响. 中国照明学会2021.</div>
+        <div class="list-row">[7] 刘享杰, <span class="me">苏航</span>, 杨彪. 自然光介入程度对工作绩效影响研究. 中国照明学会2022.</div>
+        <div class="list-row">[8] 缪晓波, <span class="me">苏航</span>, 杨彪. 室内情景照明对个人空间边界的影响. 第十五届建筑物理大会.</div>
+    </div>
+
+    <div class="card">
+        <h2>科研项目</h2>
+        <div class="list-row"><strong>● 2026/01-2029/12 国家自然科学基金面上项目</strong> (52578119) | 晨昏牵引效应 | 50万 | 参与</div>
+        <div class="list-row"><strong>● 2024/01-2024/12 地下光环境指标和营造试点</strong> | 某部军工项目 | 53万 | 参与/项目负责人</div>
+        <div class="list-row"><strong>● 2021/01-2024/12 国家自然科学基金面上项目</strong> (52078161) | 视知觉恒常性 | 58万 | 参与/骨干</div>
+        <div class="list-row"><strong>● 2024/01-2025/12 建筑安全与环境国家重点实验室开放基金</strong> (BSBE2023-04) | 5万 | 参与</div>
+        <div class="list-row"><strong>● 2023/04-2025/04 教育部“春晖计划”合作科研项目</strong> (HZKY20220300) | 参与</div>
+        <div class="list-row"><strong>● 2023/04-2025/03 哈工大港澳台交流项目</strong> | 10万 | 参与</div>
+        <div class="list-row"><strong>● 2022/07-2022/12 中国科协“科技智库青年人才计划”</strong> | 参与</div>
+        <div class="list-row"><strong>● 2022/01-2024/12 广东省普通高校创新团队项目</strong> | 600万 | 参与</div>
+        <div class="list-row"><strong>● 2022/01-2024/12 深圳市高等院校稳定支持计划</strong> | 20万 | 参与</div>
+    </div>
+
+    <div class="card">
+        <h2>获奖情况</h2>
+        <div class="list-row">[1] 2023.12 博士研究生国家奖学金（国家级）</div>
+        <div class="list-row">[2] 2022.12 第一届中国研究生“双碳”创新与创意大赛三等奖（国家级）</div>
+        <div class="list-row">[3] 2019.05 全国高校斯维尔杯BIM软件建筑信息模型大赛一等奖（国家级）</div>
+        <div class="list-row">[4] 2022.11 Tsinghua TUM International Innovation Entrepreneurship Exchange (TIE2) 一等奖（国际）</div>
+        <div class="list-row">[5] 2023.08 14th Asia Lighting Conference Student Best Paper Award（国际）</div>
+        <div class="list-row">[6] 2024.08 16th Asia Lighting Conference Student Best Paper Award（国际）</div>
+        <div class="list-row">[7] 2022.12 广东省“众创杯”创业创新大赛之大学生启航赛决赛优胜奖（省级）</div>
+        <div class="list-row">[8] 2017.08 黑龙江省高等院校建筑信息模型（BIM）及建筑物理环境模拟大赛三等奖 (省级)</div>
+        <div class="list-row">[9] 2022.09 哈尔滨工业大学（深圳）首届创意创新创业大赛（创新组）金奖 (校级)</div>
+        <div class="list-row">[10] 2021-2022年度优秀学生 (校级)</div>
+        <div class="list-row">[11] 2014.06 哈尔滨工业大学建筑学院第五届建造大赛三等奖（校级）</div>
+        <div class="list-row">[12] 2019.10 远洋“筑健未来”大学生建筑设计竞赛铜奖（单位）</div>
+        <div class="list-row">[13] 2023.05 科创中国暨哈工大全球创新创业大赛二等奖（单位）</div>
+    </div>
+
+    <div class="card">
+        <h2>工作经历</h2>
+        <div class="list-row"><strong>港澳联合实验室 (主任助理)</strong> | 2023.04-至今 | 负责哈工大-港理工对接。</div>
+        <div class="list-row"><strong>“LightOrigin”双创项目 (联合创始人)</strong> | 2021.10-2022.12 | 获双创奖项5项。</div>
+        <div class="list-row"><strong>华润置地深圳 (助理工程师实习)</strong> | 2019.10-2020.01 | 润玺二期设计管理。</div>
+        <div class="list-row"><strong>2018.07-08 《建筑技术与快题》</strong> | 讲师 | 50小时授课。</div>
+        <div class="list-row"><strong>2021.03-12 《批判性思维》等课程</strong> | 助教/主讲人 | 63小时。</div>
+    </div>
+</div>
+
+<script>
+    function exportWord() {
+        var header = "<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'><head><meta charset='utf-8'></head><body>";
+        var footer = "</body></html>";
+        var sourceHTML = header + document.getElementById("content").innerHTML + footer;
+        var source = 'data:application/vnd.ms-word;charset=utf-8,' + encodeURIComponent(sourceHTML);
+        var fileDownload = document.createElement("a");
+        document.body.appendChild(fileDownload);
+        fileDownload.href = source;
+        fileDownload.download = '苏航_个人简历.doc';
+        fileDownload.click();
+        document.body.removeChild(fileDownload);
+    }
+</script>
+</body>
+</html>
